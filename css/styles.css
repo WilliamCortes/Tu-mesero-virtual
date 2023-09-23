@@ -237,7 +237,9 @@ footer {
 .invoice-container,
 .thanks-container,
 .menu-container,
-.detail-container {
+.detail-container,
+.signUp-container,
+.login-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -248,6 +250,22 @@ footer {
 
 .thanks-container {
   justify-content: space-around;
+}
+
+.signUp-container,
+.login-container {
+  justify-content: space-evenly;
+
+  > h2 {
+    text-align: start;
+    font-size: var(--title-size);
+    width: 60%;
+    margin: 30px 0;
+  }
+
+  > a {
+    margin: 10px;
+  }
 }
 
 #table-list {
@@ -453,6 +471,53 @@ label[for="detail-add"][name="price"]::after {
   top: 8px;
   z-index: 2;
   position: absolute;
+}
+
+.singUp-content,
+.login-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 60%;
+  height: 50%;
+  max-height: 50%;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  > div > input {
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 10px;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-bottom: solid 1px black;
+    border-radius: 5px;
+    margin-top: 10px;
+    position: relative;
+  }
+
+  > div > input:active,
+  > div > input:focus {
+    border: solid 1px var(--green);
+  }
+
+  > a {
+    margin: unset !important;
+  }
+
+  > span > input {
+    margin-right: 20px;
+    outline: none;
+    border: solid 1px var(--green);
+  }
+}
+
+.login-content {
+  height: 30%;
 }
 
 /* This is the menu drawer styles */

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="William Cortés" />
+
+    <title>Ingresar</title>
+
+    <link rel="shortcut icon" href="assets/icons/logo.png" />
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fasthand&family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- This script has the function that form login use -->
+    <script>
+      const login = () => {
+        const search = document.getElementById("detail-amount");
+        alert("Los valores agregados son: " + search.value);
+        search.value = "";
+      };
+    </script>
+    <h1>GA5-220501095-AA1-EV04 - MAQUETACIÓN DE LA INTERFAZ GRÁFICA EN HTML</h1>
+    <main>
+      <div class="device">
+        <div class="container">
+          <!-- general header with hamburger menu -->
+          <header id="header"></header>
+
+          <!-- This is the main content in the view -->
+          <section class="main-content">
+            <div class="login-container">
+              <img src="./assets/images/waiter.png" width="40%" alt="Plus" />
+              <h2>Bienvenido</h2>
+              <form
+                class="login-content"
+                action="javascript: login()"
+                method="post"
+              >
+                <div>
+                  <label for="login-add" name="email"> Correo elctrónico</label>
+                  <input
+                    type="email"
+                    id="login-email"
+                    name="email"
+                    placeholder="Escriba el correo electrónico del cliente"
+                    autofocus
+                  />
+                </div>
+                <div>
+                  <label for="login-add" name="document">
+                    Número de documento
+                  </label>
+                  <input
+                    type="text"
+                    id="login-document"
+                    name="document"
+                    placeholder="Escriba el numero de documento del cliente"
+                  />
+                </div>
+              </form>
+
+              <a class="main-btn" href="index.html">Ingresar</a>
+              <div>
+                <small>¿No tiene una cuenta?</small>
+                <a href="signUp.html"> Crear Cuenta</a>
+              </div>
+            </div>
+          </section>
+
+          <!-- general footer whit the tab-bar -->
+          <footer id="tab-bar"></footer>
+
+          <!-- This is the container to menu drawer -->
+          <aside id="menu-drawer-container"></aside>
+        </div>
+      </div>
+    </main>
+
+    <!-- This script handle the drawer menu -->
+    <script src="js/index.js" type="module"></script>
+
+    <!-- This script fill the products table -->
+    <script src="js/modules/invoice.js" type="module"></script>
+  </body>
+</html>
